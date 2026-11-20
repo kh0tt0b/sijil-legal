@@ -39,15 +39,16 @@ footer a { color: var(--muted); }
 <a href="privacy-ar.html" hreflang="ar">العربية</a></div></header>
 <main>
 <h1>Sijil Privacy Policy</h1>
-<p>Last updated: 17 November 2026</p>
+<p>Last updated: 20 November 2026</p>
 <p>Sijil is a point-of-sale and bookkeeping app for shops. It is published by
 Khattab ("we", "us"). This policy explains what information the app
 handles, where it goes, and the choices you have.</p>
 <p>The short version: <strong>your shop's records stay on your phone.</strong> We do not
 collect your sales, products or customers, and the app contains no advertising
-and no analytics of our own. The one thing you send us is your shop's
-verification before subscribing: the owner's ID and the shop's licence,
-encrypted, as set out in section 3.</p>
+and no analytics of our own. Information reaches us in only two cases, both
+encrypted on your phone first: your shop's verification before subscribing
+(the owner's ID and the shop's licence, section 3), and Sijil Cloud backups if
+you choose to turn them on (section 2).</p>
 <h2>1. Information stored on your phone</h2>
 <p>Everything you enter into Sijil is stored only on the phone you enter it on:
 products and prices, stock, sales and receipts, returns, customers and what
@@ -58,9 +59,10 @@ app, out of the phone's photo gallery, and are not sent to your other tills.</p>
 <p>This information may include personal information about other people, such as
 your customers' and suppliers' names and phone numbers. You decide what to
 enter, and you are responsible for having the right to keep it (see section 7).</p>
-<p>We cannot see, read or recover any of it, except what you send us to verify
-your shop (section 3). If you uninstall the app or clear
-its data, it is deleted from the phone, unless you have made a backup.</p>
+<p>We cannot see, read or recover any of it, except as set out below for Sijil
+Cloud (section 2) and shop verification (section 3). If you uninstall the app
+or clear its data, it is deleted from the phone, unless you have made a
+backup.</p>
 <h2>2. When information leaves your phone</h2>
 <p>Information leaves your phone only when you choose one of the following:</p>
 <ul>
@@ -69,10 +71,23 @@ its data, it is deleted from the phone, unless you have made a backup.</p>
   not encrypted. Keep it somewhere safe; anyone who has the file can read it.
   If you keep documents in the app, the file includes their photos unless you
   turn that off on the backup screen.</li>
-<li><strong>Multi-till sync</strong> (multi-till plan only). If you connect your tills to a
-  sync server, records are sent to that server. The server is software that
-  you or your shop runs on its own computer or host; it is not run by us, and
-  we have no access to it.</li>
+<li><strong>Multi-till sync</strong> (multi-till plan only). If you connect your tills,
+  records go between them through a sync server that you or your shop runs on
+  its own computer or host, or through the shop's main phone. Neither is run by
+  us, and we have no access to them.</li>
+<li><strong>Sijil Cloud</strong> (optional). If you turn it on, the app keeps copies of your
+  shop's records online so that you can restore them, for example on a new
+  phone. Each backup is encrypted on your phone (AES-256) before it leaves it,
+  with a key that belongs to your shop alone. That key is stored with your
+  backups in two locked forms: one that your password opens, and one that a
+  recovery key opens, which only we hold, on our own computer and never on a
+  server. The backups are stored with our cloud provider, Supabase, under an
+  account you create with an email address. The app backs up once a day and
+  after each day close, and keeps the last 30 backups; older ones are deleted
+  automatically. We do not open your backups. We use the recovery key only
+  when you ask us to reset a forgotten password, after checking that you are
+  the shop's owner, and only so that you can set a new password. You can delete
+  all your cloud backups at any time from the app ("Delete my cloud data").</li>
 <li><strong>WhatsApp and sharing.</strong> When you send a balance reminder or share a
   statement, the app opens WhatsApp or your phone's share menu with the
   message filled in. What happens next is governed by that app's own policy.</li>
@@ -115,14 +130,17 @@ its data, it is deleted from the phone, unless you have made a backup.</p>
   stored or sent anywhere.</li>
 <li><strong>Bluetooth (nearby devices):</strong> to connect to a receipt printer already
   paired with the phone. The app does not ask for or use your location.</li>
-<li><strong>Internet:</strong> for multi-till sync with your shop's server and for Google
-  Play subscriptions.</li>
+<li><strong>Internet:</strong> for multi-till sync, Sijil Cloud, shop verification and
+  Google Play subscriptions.</li>
 </ul>
 <h2>5. Information collected by others</h2>
 <ul>
 <li>The barcode scanner uses Google's ML Kit, which runs on the phone. Google may
   collect limited technical information about its use, under Google's privacy
   policy.</li>
+<li>Supabase stores the encrypted Sijil Cloud backups and verification
+  documents on our behalf, under its own security and privacy terms. It holds
+  them only in encrypted form and cannot read them.</li>
 <li>Google Play, WhatsApp, your speech-recognition service and your phone's
   operating system each have their own privacy policies.</li>
 </ul>
@@ -130,8 +148,11 @@ its data, it is deleted from the phone, unless you have made a backup.</p>
 <h2>6. Security</h2>
 <p>Your records are stored in the app's private storage, which other apps cannot
 read. Automatic Android cloud backup is turned off so that your records do not
-leave the phone without your choice. Protect your phone with a screen lock,
-and keep backup files private.</p>
+leave the phone without your choice. Anything sent to Sijil Cloud or for
+verification is encrypted on your phone before it is sent, travels over an
+encrypted connection, and stays encrypted in the cloud. Protect your phone
+with a screen lock, choose a strong password for your Sijil account and do
+not share it, and keep backup files private.</p>
 <h2>7. Your customers' information</h2>
 <p>When you record customers or suppliers, you are responsible for that
 information. Collect only what you need, keep it accurate, and follow the data
@@ -146,11 +167,15 @@ knowingly collect information from children.</p>
   your books can always be explained; mistakes are corrected with a new entry
   rather than deleted. You can remove all data by clearing the app's data or
   uninstalling it.</li>
-<li>You can choose not to use sync, voice, WhatsApp or backups.</li>
+<li>You can choose not to use sync, voice, WhatsApp, backups or Sijil Cloud.</li>
 <li>To ask about the activation-code records we keep about your shop code, or to
   have them deleted once you no longer use your codes, contact us.</li>
-<li>You can delete your verification documents at any time, as set out in
-  section 3, and delete documents kept in the app from the Documents screen.</li>
+<li>You can delete your cloud backups and verification documents at any time
+  from the app ("Delete my cloud data"), and delete documents kept in the app
+  from the Documents screen.</li>
+<li>To delete your Sijil account itself (the email sign-in), email us from the
+  account's address. We delete the account, and anything still kept with it,
+  within 30 days.</li>
 </ul>
 <h2>10. Changes to this policy</h2>
 <p>If we change this policy, we will update the date at the top and, for
